@@ -42,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $user = $stmt->fetch(PDO::FETCH_ASSOC);
             if ($user && password_verify($password, $user['password'])) {
                 $_SESSION['success'] = 'Login successful.';
-                header("Location: https://code-deck.vercel.app/");
+                header("Location: https://code-gen-gamma.vercel.app/");
                 // You can redirect or set session variables as needed here
             } else {
                 $_SESSION['error'] = 'Invalid credentials.';
@@ -60,6 +60,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
     <title>Sign In & Sign Up Form</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <div class="container">
@@ -123,16 +124,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <div class="panel left-panel">
                 <div class="content">
                     <h3>CodeGen</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error molestias voluptas iure mollitia consequuntur quas repudiandae.</p>
+                    <p>Learn, build, and master coding. CodeGen puts the power of programming at your fingertips.</p>
                     <button class="btn transparent" id="sign-up-btn">Sign up</button>
                 </div>
-                <img src="img/log.svg" class="image" alt="">
+                <img src="img\code-gen_logo-removebg-preview.svg" class="image" alt="" width="150px" height="200px" style="margin-top: -390px;">
             </div>
 
             <div class="panel right-panel">
                 <div class="content">
                     <h3>One of us?</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error molestias voluptas iure mollitia consequuntur quas repudiandae.</p>
+                    <p>Learn, build, and master coding. CodeGen puts the power of programming at your fingertips.</p>
                     <button class="btn transparent" id="sign-in-btn">Sign in</button>
                 </div>
                 <img src="img/register.svg" class="image" alt="">
